@@ -1,0 +1,5 @@
+/* for the little “cli” label on the About image */
+.typing-animation {
+  /* you can add a blinking caret here if you like:
+       e.g. caret-color: cyan; animation: blink 1s step-end infinite; */
+}
