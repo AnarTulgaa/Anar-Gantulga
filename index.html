@@ -1,1537 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ANAR GANTULGA</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta name="description" content="Anar Gantulga — connecting operations, business, and technology. Explore skills, selected projects, and a practical approach to better systems.">
+  <meta property="og:title" content="Anar Gantulga | Operations, Business & Technology">
+  <meta property="og:description" content="Clear thinking. Better systems. A portfolio at the intersection of operations, business, and technology.">
+  <meta property="og:type" content="website">
+  <title>Anar Gantulga | Operations, Business & Technology</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23f3f1ed'/%3E%3Cpath d='M16 48 28 16h8l12 32h-8l-2-7H26l-2 7zm12-14h8l-4-12z' fill='%230b0b0c'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="#hero" aria-label="Anar Gantulga, home">Anar Gantulga<span aria-hidden="true">.</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" hidden>Menu <span aria-hidden="true">+</span></button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+        <a href="#projects">Projects</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a>
+        <a class="button button-small" href="#contact">Let’s connect <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Tailwind via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Your custom overrides (typing cursor, etc.) -->
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body class="bg-gray-900 text-gray-100 font-sans">
-    <!-- HEADER -->
-    <header
-      id="header"
-      class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6"
-    >
-      <div class="container mx-auto px-4 flex justify-between items-center">
-        <a
-          href="#"
-          class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-200 to-purple-400"
-        >
-          ANAR<span class="text-white">/</span>TULGAA
-        </a>
-
-        <!-- Desktop nav -->
-        <nav id="nav-desktop" class="hidden md:flex space-x-8">
-          <a
-            href="#hero"
-            class="text-gray-300 hover:text-cyan-400 uppercase text-sm"
-            >Home</a
-          >
-          <a
-            href="#about"
-            class="text-gray-300 hover:text-cyan-400 uppercase text-sm"
-            >About</a
-          >
-          <a
-            href="#skills"
-            class="text-gray-300 hover:text-cyan-400 uppercase text-sm"
-            >Skills</a
-          >
-          <a
-            href="#projects"
-            class="text-gray-300 hover:text-cyan-400 uppercase text-sm"
-            >Projects</a
-          >
-          <a
-            href="#ux-design"
-            class="text-gray-300 hover:text-cyan-400 uppercase text-sm"
-            >UX Design</a
-          >
-          <a
-            href="#contact"
-            class="text-gray-300 hover:text-cyan-400 uppercase text-sm"
-            >Contact</a
-          >
-        </nav>
-
-        <!-- Mobile menu button -->
-        <button id="btn-mobile-menu" class="md:hidden text-gray-300">
-          <!-- you can inline an SVG menu icon here -->
-          ☰
-        </button>
-      </div>
-
-      <!-- Mobile nav (initially hidden) -->
-      <div id="nav-mobile" class="md:hidden hidden bg-gray-800">
-        <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
-          <a href="#hero" class="text-gray-300 hover:text-cyan-400">Home</a>
-          <a href="#about" class="text-gray-300 hover:text-cyan-400">About</a>
-          <a href="#skills" class="text-gray-300 hover:text-cyan-400">Skills</a>
-          <a href="#projects" class="text-gray-300 hover:text-cyan-400"
-            >Projects</a
-          >
-          <a href="#ux-design" class="text-gray-300 hover:text-cyan-400"
-            >UX Design</a
-          >
-          <a href="#contact" class="text-gray-300 hover:text-cyan-400"
-            >Contact</a
-          >
+  <main id="main">
+    <section id="hero" class="shell hero" aria-labelledby="hero-title">
+      <div class="hero-main">
+        <div class="hero-copy">
+          <p class="eyebrow hero-intro">Hi, I’m Anar. <span class="intro-rule" aria-hidden="true"></span></p>
+          <h1 id="hero-title">Business.<br>Operations.<br><em>Technology.</em></h1>
+          <p class="hero-description">Bringing project delivery, logistics technology, and a systems mindset to the way business works.</p>
+          <div class="hero-actions"><a class="button" href="#projects">Selected work <span aria-hidden="true">↘</span></a><a class="button button-outline" href="#contact">Let’s connect <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <div class="hero-aside">
+          <figure class="portrait">
+            <img src="pro2 pic.jpg" alt="Anar Gantulga wearing a dark coat" width="983" height="1299" fetchpriority="high">
+            <figcaption><span>Anar Gantulga</span><span>Utah, USA</span></figcaption>
+          </figure>
+          <p class="hero-note"><span class="hero-focus-label">Professional focus</span>Operations &amp; Supply Chain<br>Project Management · Business Analysis</p>
         </div>
       </div>
-    </header>
+      <ol class="capability-list" aria-label="Career focus areas">
+        <li><span>01</span>Operations &amp;<br>Supply Chain</li>
+        <li><span>02</span>Project<br>Management</li>
+        <li><span>03</span>Business<br>Analysis</li>
+        <li><span>04</span>Technology<br>&amp; Systems</li>
+      </ol>
+    </section>
 
-    <main class="pt-24">
-      <!-- HERO SECTION -->
-      <section
-        id="hero"
-        class="relative h-screen flex items-center justify-center overflow-hidden"
-      >
-        <!-- Background layers -->
-        <div
-          class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?…')] bg-cover opacity-10"
-        ></div>
-        <div
-          class="absolute inset-0 bg-gradient-to-br from-gray-700 via-gray-900/95 to-gray-950"
-        ></div>
+    <div class="shell perspective-strip" aria-label="Professional interests">
+      <p>One connected perspective</p>
+      <ul><li>Operations</li><li>Technology</li><li>Global business</li></ul>
+    </div>
 
-        <div class="container mx-auto px-4 text-center z-10">
-          <h1 class="text-5xl md:text-7xl font-extrabold mb-6">
-            <span class="block">Hello, I'm</span>
-            <span
-              class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-purple-600"
-            >
-              Anar Gantulga
-            </span>
-          </h1>
-          <div class="h-8 mb-8">
-            <p
-              id="typed-text"
-              class="text-xl md:text-2xl text-gray-300 inline-block border-r-4 border-cyan-400 pr-1 animate-pulse"
-            ></p>
-          </div>
-          <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-12">
-            Building digital experiences that merge technical excellence with
-            beautiful design
-          </p>
-          <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a
-              href="#projects"
-              class="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-md shadow-lg hover:from-cyan-600 hover:to-blue-700 transition-all"
-            >
-              View My Work
-            </a>
-            <a
-              href="#contact"
-              class="px-8 py-3 bg-gray-800 text-white rounded-md border border-gray-700 hover:bg-gray-700 transition-all"
-            >
-              Contact Me
-            </a>
-          </div>
-        </div>
+    <section id="projects" class="section light-section projects-section" aria-labelledby="projects-title">
+      <div class="shell">
+      <div class="section-heading"><div><p class="eyebrow">01 / Selected work</p><h2 id="projects-title">Thinking made<br><span class="muted-heading">tangible.</span></h2></div><p class="section-note">A selection of team projects and prototypes.<br>Different problems. A connected foundation.</p></div>
 
-        <!-- Scroll down indicator -->
-        <div
-          class="absolute bottom-10 w-full flex justify-center animate-bounce"
-        >
-          <a href="#about" class="text-gray-400 hover:text-cyan-400 text-2xl"
-            >▼</a
-          >
-        </div>
-      </section>
+      <article class="project-panel" aria-labelledby="project-real-estate">
+        <div class="project-image"><img src="RealEstate.png" alt="Real-estate platform interface with property listings" width="1901" height="876" loading="lazy" decoding="async"></div>
+        <div class="project-copy"><p class="project-kicker"><span>01</span>Team project / Web application</p><h3 id="project-real-estate">Real Estate<br>Platform</h3><p>A seller-and-buyer platform built in an Agile team, with property listings, registration, and price/location filtering.</p><dl><dt>My contribution</dt><dd>Responsive frontend UI, dynamic form validation, and filter component design.</dd><dt>Systems perspective</dt><dd>Account flows, information filtering, and coordination between a JavaScript frontend and C# Web API.</dd></dl><ul class="project-tags"><li>JavaScript</li><li>C# API</li><li>Agile collaboration</li></ul></div>
+      </article>
 
-      <!-- ABOUT SECTION -->
-      <section id="about" class="py-20 bg-gray-900">
-        <div
-          class="container mx-auto px-4 flex flex-col md:flex-row gap-12 items-center"
-        >
-          <div class="md:w-1/2 relative">
-            <div class="w-full aspect-square overflow-hidden rounded-2xl">
-              <img
-                src="pro pic.jpg"
-                alt="Headshot"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div
-              class="absolute -bottom-4 -right-4 bg-gray-800 p-4 rounded-lg shadow-xl border border-gray-700"
-            >
-              <p class="text-sm font-mono text-cyan-400">
-                <span class="text-gray-400">$ </span>
-                <span class="typing-animation"
-                  >code --passion --creativity</span
-                >
-              </p>
-            </div>
-            <div
-              class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-cyan-400"
-            ></div>
-            <div
-              class="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-purple-600"
-            ></div>
-          </div>
+      <article class="project-panel project-reverse" aria-labelledby="project-garage">
+        <div class="project-image"><img src="dig garag.jpeg" alt="Digital Garage vehicle catalogue website concept" width="1023" height="642" loading="lazy" decoding="async"></div>
+        <div class="project-copy"><p class="project-kicker"><span>02</span>Frontend demo / Information systems</p><h3 id="project-garage">Digital<br>Garage</h3><p>A vehicle catalogue that turns local JSON data into a browsable collection, with filters for make, price, and year.</p><dl><dt>Project focus</dt><dd>Organizing structured data, making information discoverable, and designing clear filtering workflows.</dd><dt>Scope</dt><dd>Static frontend demonstration with a responsive card layout and horizontal gallery; no backend.</dd></dl><ul class="project-tags"><li>JavaScript</li><li>HTML / CSS</li><li>Data filtering</li></ul></div>
+      </article>
 
-          <div class="md:w-1/2">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">
-              About
-              <span
-                class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-600"
-              >
-                Me
-              </span>
-            </h2>
-            <p class="text-gray-300 mb-6">
-              I'm a passionate software engineer / web developer and UX designer
-              with a love for creating elegant solutions.
-            </p>
-            <p class="text-gray-300 mb-8">
-              My approach combines technical expertise with creative thinking
-            </p>
-            <div class="grid grid-cols-2 gap-4">
-              <!-- Card 1 Development-->
-              <div
-                class="bg-gray-800 p-4 rounded-lg border border-gray-700 hover:border-cyan-400 transition-colors text-center"
-              >
-                <!-- swap in your SVG or icon font here -->
-                <div class="text-cyan-400 mb-2 text-2xl">💻</div>
-                <h3 class="font-bold mb-1">Development</h3>
-                <p class="text-sm text-gray-400">
-                  Full‑stack engineer with a focus on clean architecture
-                </p>
-              </div>
+      <article id="ux-design" class="project-panel" aria-labelledby="project-youtube">
+        <div class="project-image project-image-light"><img src="Youtube.png" alt="YouTube redesign prototype showing revised discovery and filtering controls" width="1619" height="764" loading="lazy" decoding="async"></div>
+        <div class="project-copy"><p class="project-kicker"><span>03</span>Team concept / User-centered design</p><h3 id="project-youtube">YouTube,<br>reconsidered.</h3><p>A Figma concept shaped by user interviews and an Agile process, exploring language selection, discovery, and control over content.</p><dl><dt>My contribution</dt><dd>Ideation and prototypes for language-selection and filtering flows, informed by user feedback.</dd><dt>Business perspective</dt><dd>Understanding user needs and translating them into clearer product requirements and interactions.</dd></dl><ul class="project-tags"><li>Figma</li><li>User research</li><li>Team collaboration</li></ul></div>
+      </article>
 
-              <!-- Card 2 UX Design-->
-              <div
-                class="bg-gray-800 p-4 rounded-lg border border-gray-700 hover:border-cyan-400 transition-colors text-center"
-              >
-                <!-- swap in your SVG or icon font here -->
-                <div class="text-cyan-400 mb-2 text-2xl">🖌️</div>
-                <h3 class="font-bold mb-1">UX Design</h3>
-                <p class="text-sm text-gray-400">
-                  Creating intuitive and engaging user experiences
-                </p>
-              </div>
+      <div class="additional-work"><div class="group-heading"><h3>More from the portfolio</h3><span>Expand to explore</span></div>
+        <details class="project-disclosure"><summary><span class="work-number">04</span><span><strong>No-Mad Hotel</strong><small>Hospitality / Frontend concept</small></span><span class="disclosure-icon" aria-hidden="true">+</span></summary><div class="disclosure-content"><img src="nomad.png" alt="No-Mad Hotel website concept inspired by Mongolian hospitality" width="1364" height="787" loading="lazy" decoding="async"><div><h4>A clear digital welcome.</h4><p>A Mongolian-inspired luxury hotel concept exploring layout, visual hierarchy, and interactive UI. A frontend prototype without a backend or real booking data.</p><p class="detail-focus">Focus: hospitality presentation, navigation, and calls to action.</p><ul class="project-tags"><li>HTML / CSS</li><li>JavaScript</li></ul></div></div></details>
+        <details class="project-disclosure"><summary><span class="work-number">05</span><span><strong>Velvet Pour Coffee Shop</strong><small>Retail / Frontend concept</small></span><span class="disclosure-icon" aria-hidden="true">+</span></summary><div class="disclosure-content"><img src="coffeeShop.png" alt="Velvet Pour coffee shop website concept with warm colors and product navigation" width="1366" height="711" loading="lazy" decoding="async"><div><h4>Making the offer easy to understand.</h4><p>A coffee-shop website concept built to demonstrate layout, styling, and UI behaviors. Warm colors, readable hierarchy, and clear shopping and story entry points; no backend or real commerce data.</p><ul class="project-tags"><li>HTML / CSS</li><li>JavaScript</li></ul></div></div></details>
+        <details class="project-disclosure"><summary><span class="work-number">06</span><span><strong>Combat Game</strong><small>Course-era project / Full-stack demo</small></span><span class="disclosure-icon" aria-hidden="true">+</span></summary><div class="disclosure-content"><img src="EmpCombatStart (1).png" alt="Combat game character selection interface" width="1919" height="848" loading="lazy" decoding="async"><div><h4>Rules, states, and a complete loop.</h4><p>A freshman-year browser game with a JavaScript interface and C# logic for character selection, health, hit detection, and win/lose conditions. A basic interface demonstrating a complete battle loop.</p><ul class="project-tags"><li>JavaScript</li><li>C#</li><li>State logic</li></ul></div></div></details>
+        <details class="project-disclosure"><summary><span class="work-number">07</span><span><strong>Decision Tree Learning Library</strong><small>Course final project / Data structures &amp; algorithms</small></span><span class="disclosure-icon" aria-hidden="true">+</span></summary><div class="disclosure-content"><div class="system-diagram" role="img" aria-label="Conceptual workflow: label data, build a decision tree, evaluate results"><span>01 / Label data</span><span aria-hidden="true">↓</span><span>02 / Build a tree</span><span aria-hidden="true">↓</span><span>03 / Evaluate results</span><small>Conceptual workflow</small></div><div><h4>Structure before complexity.</h4><p>A C# framework with pluggable labeling, tree-building, and evaluation interfaces. Includes breadth-first serialization, basic and improved tree builders, k-fold cross-validation, and accuracy/precision metrics, and xUnit tests.</p><ul class="project-tags"><li>C#</li><li>Data structures</li><li>xUnit</li></ul></div></div></details>
+      </div>
+      </div>
+    </section>
 
-              <!-- Card 3 Problem Solving-->
-              <div
-                class="bg-gray-800 p-4 rounded-lg border border-gray-700 hover:border-cyan-400 transition-colors text-center"
-              >
-                <!-- swap in your SVG or icon font here -->
-                <div class="text-cyan-400 mb-2 text-2xl">💡</div>
-                <h3 class="font-bold mb-1">Problem Solving</h3>
-                <p class="text-sm text-gray-400">
-                  Tackling complex challenges with innovative solutions
-                </p>
-              </div>
-
-              <!-- Card 4 AI Enthusiast-->
-              <div
-                class="bg-gray-800 p-4 rounded-lg border border-gray-700 hover:border-cyan-400 transition-colors text-center"
-              >
-                <!-- swap in your SVG or icon font here -->
-                <div class="text-cyan-400 mb-2 text-2xl">🤖</div>
-                <h3 class="font-bold mb-1">AI Enthusiast</h3>
-                <p class="text-sm text-gray-400">
-                  Exploring the frontiers of artificial intelligence
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SKILLS SECTION -->
-      <section id="skills" class="py-20 bg-gray-800">
-        <div class="container mx-auto px-4">
-          <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
-            My
-            <span
-              class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-600"
-            >
-              Skills
-            </span>
-          </h2>
-
-          <div class="grid md:grid-cols-2 gap-12">
-            <!-- Technical -->
-            <div>
-              <h3 class="text-xl font-bold mb-8 flex items-center">
-                <span
-                  class="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center text-black mr-3"
-                  >01</span
-                >
-                Technical Skills
-              </h3>
-              <!-- skill bars -->
-              <div class="space-y-6">
-                <!-- HTML 90% -->
-                <div class="group">
-                  <div class="flex justify-between mb-2">
-                    <span
-                      class="font-medium text-gray-300 group-hover:text-cyan-400 transition-colors"
-                      >HTML</span
-                    >
-                    <span class="text-gray-400">90%</span>
-                  </div>
-                  <div class="w-full bg-gray-700 rounded-full h-2.5">
-                    <div
-                      class="h-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 group-hover:from-cyan-400 group-hover:to-purple-600 transition-all duration-500"
-                      style="width: 90%"
-                    ></div>
-                  </div>
-                </div>
-                <!-- CSS 85%-->
-                <div class="group">
-                  <div class="flex justify-between mb-2">
-                    <span
-                      class="font-medium text-gray-300 group-hover:text-cyan-400 transition-colors"
-                      >CSS</span
-                    >
-                    <span class="text-gray-400">85%</span>
-                  </div>
-                  <div class="w-full bg-gray-700 rounded-full h-2.5">
-                    <div
-                      class="h-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 group-hover:from-cyan-400 group-hover:to-purple-600 transition-all duration-500"
-                      style="width: 85%"
-                    ></div>
-                  </div>
-                </div>
-                <!-- JavaScript 85%-->
-                <div class="group">
-                  <div class="flex justify-between mb-2">
-                    <span
-                      class="font-medium text-gray-300 group-hover:text-cyan-400 transition-colors"
-                      >JavaScript</span
-                    >
-                    <span class="text-gray-400">85%</span>
-                  </div>
-                  <div class="w-full bg-gray-700 rounded-full h-2.5">
-                    <div
-                      class="h-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 group-hover:from-cyan-400 group-hover:to-purple-600 transition-all duration-500"
-                      style="width: 85%"
-                    ></div>
-                  </div>
-                </div>
-                <!-- C# 90%-->
-                <div class="group">
-                  <div class="flex justify-between mb-2">
-                    <span
-                      class="font-medium text-gray-300 group-hover:text-cyan-400 transition-colors"
-                      >C#</span
-                    >
-                    <span class="text-gray-400">90%</span>
-                  </div>
-                  <div class="w-full bg-gray-700 rounded-full h-2.5">
-                    <div
-                      class="h-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 group-hover:from-cyan-400 group-hover:to-purple-600 transition-all duration-500"
-                      style="width: 90%"
-                    ></div>
-                  </div>
-                </div>
-                <!-- Python 40%-->
-                <div class="group">
-                  <div class="flex justify-between mb-2">
-                    <span
-                      class="font-medium text-gray-300 group-hover:text-cyan-400 transition-colors"
-                      >Python</span
-                    >
-                    <span class="text-gray-400">45%</span>
-                  </div>
-                  <div class="w-full bg-gray-700 rounded-full h-2.5">
-                    <div
-                      class="h-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 group-hover:from-cyan-400 group-hover:to-purple-600 transition-all duration-500"
-                      style="width: 45%"
-                    ></div>
-                  </div>
-                </div>
-
-                <!-- UI/UX Design 85%-->
-                <div class="group">
-                  <div class="flex justify-between mb-2">
-                    <span
-                      class="font-medium text-gray-300 group-hover:text-cyan-400 transition-colors"
-                      >UI/UX Design</span
-                    >
-                    <span class="text-gray-400">85%</span>
-                  </div>
-                  <div class="w-full bg-gray-700 rounded-full h-2.5">
-                    <div
-                      class="h-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 group-hover:from-cyan-400 group-hover:to-purple-600 transition-all duration-500"
-                      style="width: 85%"
-                    ></div>
-                  </div>
-                </div>
-
-                <!-- Figma 88%-->
-                <div class="group">
-                  <div class="flex justify-between mb-2">
-                    <span
-                      class="font-medium text-gray-300 group-hover:text-cyan-400 transition-colors"
-                      >Figma</span
-                    >
-                    <span class="text-gray-400">88%</span>
-                  </div>
-                  <div class="w-full bg-gray-700 rounded-full h-2.5">
-                    <div
-                      class="h-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 group-hover:from-cyan-400 group-hover:to-purple-600 transition-all duration-500"
-                      style="width: 88%"
-                    ></div>
-                  </div>
-                </div>
-
-                <!-- Assembly/MIPS 60%-->
-                <div class="group">
-                  <div class="flex justify-between mb-2">
-                    <span
-                      class="font-medium text-gray-300 group-hover:text-cyan-400 transition-colors"
-                      >Assembly/MIPS</span
-                    >
-                    <span class="text-gray-400">60%</span>
-                  </div>
-                  <div class="w-full bg-gray-700 rounded-full h-2.5">
-                    <div
-                      class="h-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 group-hover:from-cyan-400 group-hover:to-purple-600 transition-all duration-500"
-                      style="width: 60%"
-                    ></div>
-                  </div>
-                </div>
-
-                <!-- R programming language 80%-->
-                <div class="group">
-                  <div class="flex justify-between mb-2">
-                    <span
-                      class="font-medium text-gray-300 group-hover:text-cyan-400 transition-colors"
-                      >R programming language</span
-                    >
-                    <span class="text-gray-400">80%</span>
-                  </div>
-                  <div class="w-full bg-gray-700 rounded-full h-2.5">
-                    <div
-                      class="h-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 group-hover:from-cyan-400 group-hover:to-purple-600 transition-all duration-500"
-                      style="width: 80%"
-                    ></div>
-                  </div>
-                </div>
-
-                <!-- Linux 40%-->
-                <div class="group">
-                  <div class="flex justify-between mb-2">
-                    <span
-                      class="font-medium text-gray-300 group-hover:text-cyan-400 transition-colors"
-                      >Linux</span
-                    >
-                    <span class="text-gray-400">40%</span>
-                  </div>
-                  <div class="w-full bg-gray-700 rounded-full h-2.5">
-                    <div
-                      class="h-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 group-hover:from-cyan-400 group-hover:to-purple-600 transition-all duration-500"
-                      style="width: 40%"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Soft & Tools -->
-            <div>
-              <h3 class="text-xl font-bold mb-8 flex items-center">
-                <span
-                  class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-black mr-3"
-                  >02</span
-                >
-                Soft Skills
-              </h3>
-              <div class="grid grid-cols-2 gap-4">
-                <!-- Problem Solving -->
-                <div
-                  class="bg-gray-700 border border-gray-600 rounded-lg p-4 hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300"
-                >
-                  <div class="flex items-center">
-                    <div class="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
-                    <span class="text-gray-300">Problem Solving</span>
-                  </div>
-                </div>
-                <!-- Communication -->
-                <div
-                  class="bg-gray-700 border border-gray-600 rounded-lg p-4 hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300"
-                >
-                  <div class="flex items-center">
-                    <div class="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
-                    <span class="text-gray-300"
-                      >Communication Responsiveness</span
-                    >
-                  </div>
-                </div>
-                <!-- Team Collaboration -->
-                <div
-                  class="bg-gray-700 border border-gray-600 rounded-lg p-4 hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300"
-                >
-                  <div class="flex items-center">
-                    <div class="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
-                    <span class="text-gray-300">Team Collaboration</span>
-                  </div>
-                </div>
-                <!-- Project Management -->
-                <div
-                  class="bg-gray-700 border border-gray-600 rounded-lg p-4 hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300"
-                >
-                  <div class="flex items-center">
-                    <div class="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
-                    <span class="text-gray-300"
-                      >Project Management & Leadership</span
-                    >
-                  </div>
-                </div>
-                <!-- Creative Thinking -->
-                <div
-                  class="bg-gray-700 border border-gray-600 rounded-lg p-4 hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300"
-                >
-                  <div class="flex items-center">
-                    <div class="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
-                    <span class="text-gray-300">Creative Thinking</span>
-                  </div>
-                </div>
-                <!-- Attention to Detail -->
-                <div
-                  class="bg-gray-700 border border-gray-600 rounded-lg p-4 hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300"
-                >
-                  <div class="flex items-center">
-                    <div class="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
-                    <span class="text-gray-300">Attention to Detail</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="mt-12">
-                <h3 class="text-xl font-bold mb-6 flex items-center">
-                  <span
-                    class="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center text-black mr-3"
-                    >03</span
-                  >
-                  Tools & Technologies
-                </h3>
-                <div class="flex flex-wrap gap-3">
-                  <!-- VS code -->
-                  <span
-                    class="px-4 py-2 bg-gray-700 text-gray-300 rounded-full text-sm border border-gray-600 hover:border-cyan-500 hover:text-white transition-colors duration-300"
-                    >VS Code</span
-                  >
-                  <!-- Git -->
-                  <span
-                    class="px-4 py-2 bg-gray-700 text-gray-300 rounded-full text-sm border border-gray-600 hover:border-cyan-500 hover:text-white transition-colors duration-300"
-                    >Git</span
-                  >
-                  <!-- Figma -->
-                  <span
-                    class="px-4 py-2 bg-gray-700 text-gray-300 rounded-full text-sm border border-gray-600 hover:border-cyan-500 hover:text-white transition-colors duration-300"
-                    >Figma</span
-                  >
-                  <!-- Github -->
-                  <span
-                    class="px-4 py-2 bg-gray-700 text-gray-300 rounded-full text-sm border border-gray-600 hover:border-cyan-500 hover:text-white transition-colors duration-300"
-                    >Github</span
-                  >
-                </div>
-              </div>
-
-              <div class="mt-12">
-                <h3 class="text-xl font-bold mb-6 flex items-center">
-                  <span
-                    class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-black mr-3"
-                    >04</span
-                  >
-                  AI & Tools
-                </h3>
-                <div class="flex flex-wrap gap-3">
-                  <!-- CoPilot -->
-                  <span
-                    class="px-4 py-2 bg-gray-700 text-gray-300 rounded-full text-sm border border-gray-600 hover:border-purple-500 hover:text-white transition-colors duration-300"
-                    >CoPilot/ChatGpt</span
-                  >
-                  <!-- Perplexity -->
-                  <span
-                    class="px-4 py-2 bg-gray-700 text-gray-300 rounded-full text-sm border border-gray-600 hover:border-purple-500 hover:text-white transition-colors duration-300"
-                    >Perplexity</span
-                  >
-                  <!-- DeepSeek -->
-                  <span
-                    class="px-4 py-2 bg-gray-700 text-gray-300 rounded-full text-sm border border-gray-600 hover:border-purple-500 hover:text-white transition-colors duration-300"
-                    >DeepSeek</span
-                  >
-                  <!-- Magic Patterns -->
-                  <span
-                    class="px-4 py-2 bg-gray-700 text-gray-300 rounded-full text-sm border border-gray-600 hover:border-purple-500 hover:text-white transition-colors duration-300"
-                    >Magic Patterns</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PROJECTS SECTION -->
-      <section id="projects" class="py-20 bg-gray-900">
-        <div class="container mx-auto px-4">
-          <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
-            Featured
-            <span
-              class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-600"
-              >Projects</span
-            >
-          </h2>
-
-          <div class="flex flex-col lg:flex-row gap-8">
-            <!-- Nav Buttons -->
-            <div class="lg:w-1/3">
-              <div class="sticky top-24 space-y-4">
-                <button
-                  class="proj-btn w-full text-left p-4 rounded-lg bg-gray-800/50 hover:bg-gray-800/80 transition-all duration-300"
-                  data-index="0"
-                >
-                  <h3 class="font-bold text-gray-300">No-Mad Hotel</h3>
-                  <p class="text-sm text-gray-400 mt-1 line-clamp-2">
-                    A demo website for a luxury hotel in Mongolian nature…
-                  </p>
-                </button>
-                <!-- repeat for AI Task Manager, E‑Commerce Platform… -->
-                <button
-                  class="proj-btn w-full text-left p-4 rounded-lg bg-gray-800/50 hover:bg-gray-800/80 transition-all duration-300"
-                  data-index="1"
-                >
-                  <h3 class="font-bold text-gray-300">
-                    Data Structure & Algorithm
-                  </h3>
-                  <p class="text-sm text-gray-400 mt-1 line-clamp-2">
-                    A final project for Data Structure & Algorithm course…
-                  </p>
-                </button>
-
-                <button
-                  class="proj-btn w-full text-left p-4 rounded-lg bg-gray-800/50 hover:bg-gray-800/80 transition-all duration-300"
-                  data-index="2"
-                >
-                  <h3 class="font-bold text-gray-300">Digital Garage</h3>
-                  <p class="text-sm text-gray-400 mt-1 line-clamp-2">
-                    A side project for car collectors…
-                  </p>
-                </button>
-
-                <button
-                  class="proj-btn w-full text-left p-4 rounded-lg bg-gray-800/50 hover:bg-gray-800/80 transition-all duration-300"
-                  data-index="3"
-                >
-                  <h3 class="font-bold text-gray-300">Combat Game</h3>
-                  <p class="text-sm text-gray-400 mt-1 line-clamp-2">
-                    A full-stack browser-based fighting game inspired by Mortal
-                    Combat…
-                  </p>
-                </button>
-
-                <button
-                  class="proj-btn w-full text-left p-4 rounded-lg bg-gray-800/50 hover:bg-gray-800/80 transition-all duration-300"
-                  data-index="4"
-                >
-                  <h3 class="font-bold text-gray-300">Real-Estate</h3>
-                  <p class="text-sm text-gray-400 mt-1 line-clamp-2">
-                    A full-featured real Real-Estate website…
-                  </p>
-                </button>
-
-                <button
-                  class="proj-btn w-full text-left p-4 rounded-lg bg-gray-800/50 hover:bg-gray-800/80 transition-all duration-300"
-                  data-index="5"
-                >
-                  <h3 class="font-bold text-gray-300">Online Coffee</h3>
-                  <p class="text-sm text-gray-400 mt-1 line-clamp-2">
-                    A demo website for coffee shops …
-                  </p>
-                </button>
-              </div>
-            </div>
-
-            <!-- Details -->
-            <div class="lg:w-2/3 space-y-4">
-              <div
-                id="project-details-0"
-                class="project-detail bg-gray-800 rounded-xl overflow-hidden border border-gray-700"
-              >
-                <div class="aspect-video w-full overflow-hidden">
-                  <img
-                    src="nomad.png"
-                    alt="No-Mad Hotel"
-                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
-                <div class="p-6">
-                  <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-2xl font-bold text-white">No-Mad Hotel</h3>
-                    <div class="flex gap-2">
-                      <a
-                        href="#"
-                        class="p-2 bg-gray-700 rounded-full hover:bg-cyan-500 hover:text-black transition-colors"
-                        title="Live Demo"
-                        >🔗</a
-                      >
-                      <a
-                        href="#"
-                        class="p-2 bg-gray-700 rounded-full hover:bg-purple-600 hover:text-black transition-colors"
-                        title="GitHub"
-                        >GitHub</a
-                      >
-                    </div>
-                  </div>
-                  <p class="text-gray-300 mb-6">
-                    No-Mad Hotel (Concept Prototype): A purely front-end demo of
-                    a Mongolian-inspired hotel site built with semantic HTML,
-                    CSS, and vanilla JavaScript for interactive
-                    elements—designed solely to showcase layout, styling, and UI
-                    behaviors with no backend or real data.
-                  </p>
-                  <div class="flex flex-wrap gap-2 mb-6">
-                    <span
-                      class="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600"
-                      >JavaScript</span
-                    >
-                    <span
-                      class="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600"
-                      >HTML</span
-                    >
-                    <span
-                      class="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600"
-                      >CSS</span
-                    >
-                    <!-- repeat for Canvas API, Animation… -->
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <div class="flex items-center text-gray-400 text-sm">
-                      <span class="mr-2">💡</span><span>View code samples</span>
-                    </div>
-                    <button
-                      class="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-md hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                    >
-                      View Project Details
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Repeat project-detail blocks with IDs 1,2… and class .hidden initially except #project-details-0 -->
-              <div
-                id="project-details-1"
-                class="project-detail bg-gray-800 rounded-xl overflow-hidden border border-gray-700"
-              >
-                <div class="aspect-video w-full overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                    alt="Mortal Combat Game"
-                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
-                <div class="p-6">
-                  <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-2xl font-bold text-white">
-                      Data Structure & Algorithm
-                    </h3>
-                    <div class="flex gap-2">
-                      <a
-                        href="#"
-                        class="p-2 bg-gray-700 rounded-full hover:bg-cyan-500 hover:text-black transition-colors"
-                        title="Live Demo"
-                        >🔗</a
-                      >
-                      <a
-                        href="#"
-                        class="p-2 bg-gray-700 rounded-full hover:bg-purple-600 hover:text-black transition-colors"
-                        title="GitHub"
-                        >GitHub</a
-                      >
-                    </div>
-                  </div>
-                  <p class="text-gray-300 mb-6">
-                    Decision Tree Learning Library: A C# framework that defines
-                    pluggable interfaces for labeling, tree building, and
-                    evaluation—complete with breadth-first serialization, simple
-                    & improved tree builders, k-fold cross-validation, and
-                    accuracy/precision metrics—all wired together and verified
-                    via xUnit tests.
-                  </p>
-                  <div class="flex flex-wrap gap-2 mb-6">
-                    <span
-                      class="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600"
-                      >C#</span
-                    >
-                    <!-- repeat for Canvas API, Animation… -->
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <div class="flex items-center text-gray-400 text-sm">
-                      <span class="mr-2">💡</span><span>View code samples</span>
-                    </div>
-                    <button
-                      class="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-md hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                    >
-                      View Project Details
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                id="project-details-2"
-                class="project-detail bg-gray-800 rounded-xl overflow-hidden border border-gray-700"
-              >
-                <div class="aspect-video w-full overflow-hidden">
-                  <img
-                    src="dig garag.jpeg"
-                    alt="Mortal Combat Game"
-                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
-                <div class="p-6">
-                  <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-2xl font-bold text-white">
-                      Digital Garage
-                    </h3>
-                    <div class="flex gap-2">
-                      <a
-                        href="#"
-                        class="p-2 bg-gray-700 rounded-full hover:bg-cyan-500 hover:text-black transition-colors"
-                        title="Live Demo"
-                        >🔗</a
-                      >
-                      <a
-                        href="#"
-                        class="p-2 bg-gray-700 rounded-full hover:bg-purple-600 hover:text-black transition-colors"
-                        title="GitHub"
-                        >GitHub</a
-                      >
-                    </div>
-                  </div>
-                  <p class="text-gray-300 mb-6">
-                    DigitalGarage (Front-End Demo): A static HTML/CSS/JavaScript
-                    single-page app that pulls vehicle data from a local JSON
-                    file and dynamically renders a responsive, card-based
-                    catalogue with vanilla JS filtering (by make, price, year)
-                    and a smooth horizontal scrolling gallery—showcasing clean
-                    semantic markup, modular styling, and interactive UI
-                    behaviors without any backend.
-                  </p>
-                  <div class="flex flex-wrap gap-2 mb-6">
-                    <span
-                      class="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600"
-                      >JavaScript</span
-                    >
-                    <span
-                      class="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600"
-                      >HTML</span
-                    >
-                    <span
-                      class="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600"
-                      >CSS</span
-                    >
-                    <!-- repeat for Canvas API, Animation… -->
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <div class="flex items-center text-gray-400 text-sm">
-                      <span class="mr-2">💡</span><span>View code samples</span>
-                    </div>
-                    <button
-                      class="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-md hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                    >
-                      View Project Details
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                id="project-details-3"
-                class="project-detail bg-gray-800 rounded-xl overflow-hidden border border-gray-700"
-              >
-                <div class="aspect-video w-full overflow-hidden">
-                  <img
-                    src="EmpCombatStart (1).png"
-                    alt="Mortal Combat Game"
-                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
-                <div class="p-6">
-                  <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-2xl font-bold text-white">Combat Game</h3>
-                    <div class="flex gap-2">
-                      <a
-                        href="#"
-                        class="p-2 bg-gray-700 rounded-full hover:bg-cyan-500 hover:text-black transition-colors"
-                        title="Live Demo"
-                        >🔗</a
-                      >
-                      <a
-                        href="#"
-                        class="p-2 bg-gray-700 rounded-full hover:bg-purple-600 hover:text-black transition-colors"
-                        title="GitHub"
-                        >GitHub</a
-                      >
-                    </div>
-                  </div>
-                  <p class="text-gray-300 mb-6">
-                    Combat Game (Freshman Full-Stack Demo): A JavaScript front
-                    end with a C# back end that emulates a Mortal Kombat–style
-                    fighter using real-world warriors (Vikings, Spartans,
-                    Samurai, etc.), complete with character selection,
-                    health-bar logic, and win/lose conditions. All match flow,
-                    hit-detection, and player stats are handled in C#, while the
-                    browser UI (menus, character portraits, and combat text) is
-                    rendered with vanilla JS. The interface is basic—no
-                    animations or fancy graphics—so it feels clunky to navigate,
-                    but it proves a fully functional battle loop and
-                    server-style logic built in my freshman year.
-                  </p>
-                  <div class="flex flex-wrap gap-2 mb-6">
-                    <span
-                      class="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600"
-                      >JavaScript</span
-                    >
-                    <span
-                      class="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600"
-                      >HTML</span
-                    >
-                    <span
-                      class="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600"
-                      >CSS</span
-                    >
-                    <span
-                      class="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600"
-                      >C#</span
-                    >
-                    <span
-                      class="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600"
-                      >API</span
-                    >
-                    <!-- repeat for Canvas API, Animation… -->
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <div class="flex items-center text-gray-400 text-sm">
-                      <span class="mr-2">💡</span><span>View code samples</span>
-                    </div>
-                    <button
-                      class="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-md hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                    >
-                      View Project Details
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                id="project-details-4"
-                class="project-detail bg-gray-800 rounded-xl overflow-hidden border border-gray-700"
-              >
-                <div class="aspect-video w-full overflow-hidden">
-                  <img
-                    src="RealEstate.png"
-                    alt="Mortal Combat Game"
-                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
-                <div class="p-6">
-                  <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-2xl font-bold text-white">Real-Estate</h3>
-                    <div class="flex gap-2">
-                      <a
-                        href="#"
-                        class="p-2 bg-gray-700 rounded-full hover:bg-cyan-500 hover:text-black transition-colors"
-                        title="Live Demo"
-                        >🔗</a
-                      >
-                      <a
-                        href="#"
-                        class="p-2 bg-gray-700 rounded-full hover:bg-purple-600 hover:text-black transition-colors"
-                        title="GitHub"
-                        >GitHub</a
-                      >
-                    </div>
-                  </div>
-                  <p class="text-gray-300 mb-6">
-                    Real Estate Platform (Agile Full-Stack Team Project): In a
-                    collaborative Agile sprint, we built a JavaScript front end
-                    backed by a C# Web API server. The app supports two account
-                    types (seller/buyer), user registration/login,
-                    seller-created property posts, and buyer-side filtering by
-                    price and location. As part of the frontend team, I
-                    contributed to the responsive UI, dynamic form validation,
-                    and filter component design, while our C# API handled
-                    authentication, data persistence, and listing endpoints.
-                  </p>
-                  <div class="flex flex-wrap gap-2 mb-6">
-                    <span
-                      class="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600"
-                      >JavaScript</span
-                    >
-                    <span
-                      class="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600"
-                      >HTML</span
-                    >
-                    <span
-                      class="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600"
-                      >CSS</span
-                    >
-                    <!-- repeat for Canvas API, Animation… -->
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <div class="flex items-center text-gray-400 text-sm">
-                      <span class="mr-2">💡</span><span>View code samples</span>
-                    </div>
-                    <button
-                      class="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-md hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                    >
-                      View Project Details
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                id="project-details-5"
-                class="project-detail bg-gray-800 rounded-xl overflow-hidden border border-gray-700"
-              >
-                <div class="aspect-video w-full overflow-hidden">
-                  <img
-                    src="coffeeShop.png"
-                    alt="Velvet Pour Coffee Shop"
-                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
-                <div class="p-6">
-                  <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-2xl font-bold text-white">
-                      Velvet Pour Coffee Shop
-                    </h3>
-                    <div class="flex gap-2">
-                      <a
-                        href="#"
-                        class="p-2 bg-gray-700 rounded-full hover:bg-cyan-500 hover:text-black transition-colors"
-                        title="Live Demo"
-                        >🔗</a
-                      >
-                      <a
-                        href="#"
-                        class="p-2 bg-gray-700 rounded-full hover:bg-purple-600 hover:text-black transition-colors"
-                        title="GitHub"
-                        >GitHub</a
-                      >
-                    </div>
-                  </div>
-                  <p class="text-gray-300 mb-6">
-                    Velvet Pour Coffee Shop (Concept Prototype): A front-end
-                    demo of a coffee shop website built with semantic HTML, CSS,
-                    and vanilla JavaScript for interactive elements—designed
-                    solely to showcase layout, styling, and UI behaviors with no
-                    backend or real data.
-                  </p>
-                  <div class="flex flex-wrap gap-2 mb-6">
-                    <span
-                      class="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600"
-                      >JavaScript</span
-                    >
-                    <span
-                      class="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600"
-                      >HTML</span
-                    >
-                    <span
-                      class="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600"
-                      >CSS</span
-                    >
-                    <!-- repeat for Canvas API, Animation… -->
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <div class="flex items-center text-gray-400 text-sm">
-                      <span class="mr-2">💡</span><span>View code samples</span>
-                    </div>
-                    <button
-                      class="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-md hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                    >
-                      View Project Details
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- UX DESIGN SECTION -->
-      <section id="ux-design" class="py-20 bg-gray-800">
-        <div class="container mx-auto px-4">
-          <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
-            UX
-            <span
-              class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-600"
-            >
-              Design
-            </span>
-            Portfolio
-          </h2>
-          <p class="text-gray-300 text-center max-w-2xl mx-auto mb-12">
-            Crafting intuitive and visually appealing interfaces…
-          </p>
-
-          <!-- Category buttons -->
-          <div class="flex justify-center mb-12">
-            <div class="inline-flex bg-gray-700 rounded-lg p-1">
-              <button
-                class="px-4 py-2 text-gray-300 hover:text-white transition-all"
-                data-cat="all"
-              >
-                All Projects
-              </button>
-              <button
-                class="px-4 py-2 text-gray-300 hover:text-white transition-all"
-                data-cat="web"
-              >
-                Web Design
-              </button>
-              <button
-                class="px-4 py-2 text-gray-300 hover:text-white transition-all"
-                data-cat="mobile"
-              >
-                Mobile Apps
-              </button>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Example UX project card -->
-            <div
-              class="ux-card group bg-gray-900 rounded-xl overflow-hidden border border-gray-700 transition-all"
-              data-cat="mobile"
-            >
-              <div class="aspect-video overflow-hidden">
-                <img
-                  src="Youtube.png"
-                  alt="Redesigned YouTube APP"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <div class="p-6">
-                <h3
-                  class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition-colors"
-                >
-                  Redesigned YouTube APP
-                </h3>
-                <p class="text-gray-400 text-sm mb-4">
-                  YouTube Redesign (Figma UI/UX Concept): A user-centered,
-                  Figma-based prototype created in an Agile process with
-                  continuous user interviews. We introduced a language-toggle
-                  dropdown and category filters on the homepage, designed a new
-                  “Explore Creators” page for discovering channels, and built
-                  customizable controls so users can throttle or hide Shorts and
-                  Movies. I specifically ideated and prototyped the
-                  language-selection and filtering flows based on user feedback
-                  while collaborating on overall layout and interaction
-                  patterns.
-                </p>
-                <div class="flex justify-between items-center">
-                  <span class="text-xs uppercase tracking-wider text-gray-500"
-                    >Figma Project</span
-                  >
-                  <button class="text-sm text-cyan-400 hover:text-cyan-300">
-                    View Case Study →
-                  </button>
-                </div>
-              </div>
-            </div>
-            <!-- repeat for other designProjects… -->
-
-            <div
-              class="ux-card group bg-gray-900 rounded-xl overflow-hidden border border-gray-700 transition-all"
-              data-cat="web"
-            >
-              <div class="aspect-video overflow-hidden">
-                <img
-                  src="coffeeShop.png"
-                  alt="Coffee Shop Web Design"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <div class="p-6">
-                <h3
-                  class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition-colors"
-                >
-                  Coffee Shop Web Design
-                </h3>
-                <p class="text-gray-400 text-sm mb-4">
-                  When you land on the page, a deep, coffee-bean–toned
-                  background immediately feels warm and luxurious. The bold
-                  white serif headline “Crafted with Passion, Served with Pride”
-                  draws you in, and gold buttons for “Shop Now” and “Our Story”
-                  stand out without shouting. The clean, uppercase nav keeps
-                  everything simple—logo left, links center, cart icon right—so
-                  you never wonder where to click. Altogether, the mix of
-                  elegant typography, rich colors, and subtle texture makes the
-                  site feel both modern and artisanal.
-                </p>
-                <div class="flex justify-between items-center">
-                  <span class="text-xs uppercase tracking-wider text-gray-500"
-                    >HTML</span
-                  >
-                  <span class="text-xs uppercase tracking-wider text-gray-500"
-                    >CSS</span
-                  >
-                  <button class="text-sm text-cyan-400 hover:text-cyan-300">
-                    View Case Study →
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="ux-card group bg-gray-900 rounded-xl overflow-hidden border border-gray-700 transition-all"
-              data-cat="web"
-            >
-              <div class="aspect-video overflow-hidden">
-                <img
-                  src="dig garag.jpeg"
-                  alt="DigitalGarage Web Design"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <div class="p-6">
-                <h3
-                  class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition-colors"
-                >
-                  Digital Garage Web Design
-                </h3>
-                <p class="text-gray-400 text-sm mb-4">
-                  Dark, moody tones and a full-width sports car image convey
-                  luxury and exclusivity. Centered all-caps “WHERE CARS AREN’T
-                  JUST COLLECTED” and a concise subheading guide users to a
-                  single “Explore Garage” CTA, while three smaller car images
-                  hint at the collection’s breadth. The high-contrast text,
-                  minimalist layout, and premium photography evoke a high-end
-                  showroom experience.
-                </p>
-                <div class="flex justify-between items-center">
-                  <span class="text-xs uppercase tracking-wider text-gray-500"
-                    >HTML</span
-                  >
-                  <span class="text-xs uppercase tracking-wider text-gray-500"
-                    >CSS</span
-                  >
-                  <button class="text-sm text-cyan-400 hover:text-cyan-300">
-                    View Case Study →
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="ux-card group bg-gray-900 rounded-xl overflow-hidden border border-gray-700 transition-all"
-              data-cat="web"
-            >
-              <div class="aspect-video overflow-hidden">
-                <img
-                  src="nomad.png"
-                  alt="Hotel Web Design"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <div class="p-6">
-                <h3
-                  class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition-colors"
-                >
-                  Hotel Web Design
-                </h3>
-                <p class="text-gray-400 text-sm mb-4">
-                  A soothing, nature-inspired backdrop sets a serene tone, while
-                  the crisp white headline “Experience Mongolia’s Timeless
-                  Luxury” (with “Timeless” in gold) immediately draws you in.
-                  The solid gold “Book Your Stay” and outlined “Explore
-                  Experiences” buttons provide clear calls to action, and the
-                  minimalist nav plus bright yellow logo keep everything clean
-                  and balanced.
-                </p>
-                <div class="flex justify-between items-center">
-                  <span class="text-xs uppercase tracking-wider text-gray-500"
-                    >HTML</span
-                  >
-                  <span class="text-xs uppercase tracking-wider text-gray-500"
-                    >CSS</span
-                  >
-                  <button class="text-sm text-cyan-400 hover:text-cyan-300">
-                    View Case Study →
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="ux-card group bg-gray-900 rounded-xl overflow-hidden border border-gray-700 transition-all"
-              data-cat="web"
-            >
-              <div class="aspect-video overflow-hidden">
-                <img
-                  src="RealEstate.png"
-                  alt="Real-Estate"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <div class="p-6">
-                <h3
-                  class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition-colors"
-                >
-                  Real-Estate Web Design
-                </h3>
-                <p class="text-gray-400 text-sm mb-4">
-                  The blue header conveys trust and stability—key for real
-                  estate—while the white background ensures maximum readability
-                  and a clean, spacious feel. Together, the high-contrast blue
-                  accents (buttons, highlights) against white cards direct the
-                  eye to interactive elements and prices, reinforcing a
-                  professional, dependable user experience.
-                </p>
-                <div class="flex justify-between items-center">
-                  <span class="text-xs uppercase tracking-wider text-gray-500"
-                    >HTML</span
-                  >
-                  <span class="text-xs uppercase tracking-wider text-gray-500"
-                    >CSS</span
-                  >
-                  <button class="text-sm text-cyan-400 hover:text-cyan-300">
-                    View Case Study →
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT SECTION -->
-      <section id="contact" class="py-20 bg-gray-900 relative overflow-hidden">
-        <div
-          class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 to-purple-600"
-        ></div>
-        <div class="container mx-auto px-4">
-          <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
-            Get In
-            <span
-              class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-600"
-            >
-              Touch
-            </span>
-          </h2>
-          <p class="text-gray-300 text-center max-w-2xl mx-auto mb-12">
-            Have a project in mind or want to collaborate? …
-          </p>
-
-          <!-- Contact cards (Email, Phone, Location) -->
-          <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <div
-              class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-cyan-500 transition-colors text-center"
-            >
-              <div
-                class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mb-4"
-              >
-                <span class="text-cyan-400">✉️</span>
-              </div>
-              <h3 class="font-bold mb-2">Email</h3>
-              <p class="text-gray-400 mb-2">Send me an email</p>
-              <a
-                href="mailto:hello@example.com"
-                class="text-cyan-400 hover:text-cyan-300"
-                >Anargantulga984@gmail.com</a
-              >
-            </div>
-            <div
-              class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-purple-600 transition-colors text-center"
-            >
-              <div
-                class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mb-4"
-              >
-                <span class="text-purple-600">📞</span>
-              </div>
-              <h3 class="font-bold mb-2">Phone</h3>
-              <p class="text-gray-400 mb-2">Give me a call</p>
-              <a
-                href="tel:+1234567890"
-                class="text-purple-500 hover:text-purple-400"
-                >+1 (801)833-4082</a
-              >
-            </div>
-            <div
-              class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-cyan-500 transition-colors text-center"
-            >
-              <div
-                class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mb-4"
-              >
-                <span class="text-cyan-400">📍</span>
-              </div>
-              <h3 class="font-bold mb-2">Location</h3>
-              <p class="text-gray-400 mb-2">Based in</p>
-              <span class="text-white">UT, USA</span>
-            </div>
-          </div>
-
-          <!-- Message form -->
-          <div
-            class="bg-gray-800 rounded-xl border border-gray-700 p-6 md:p-8 max-w-4xl mx-auto"
-          >
-            <h3 class="text-2xl font-bold mb-6">Send Me a Message</h3>
-            <form id="contact-form">
-              <div class="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label
-                    for="name"
-                    class="block text-sm font-medium text-gray-400 mb-2"
-                    >Your Name</label
-                  >
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    class="w-full bg-gray-700 border border-gray-600 rounded-md px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label
-                    for="email"
-                    class="block text-sm font-medium text-gray-400 mb-2"
-                    >Your Email</label
-                  >
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    class="w-full bg-gray-700 border border-gray-600 rounded-md px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  />
-                </div>
-              </div>
-
-              <div class="mb-6">
-                <label
-                  for="subject"
-                  class="block text-sm font-medium text-gray-400 mb-2"
-                  >Subject</label
-                >
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  required
-                  class="w-full bg-gray-700 border border-gray-600 rounded-md px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-              </div>
-
-              <div class="mb-6">
-                <label
-                  for="message"
-                  class="block text-sm font-medium text-gray-400 mb-2"
-                  >Your Message</label
-                >
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="5"
-                  required
-                  class="w-full bg-gray-700 border border-gray-600 rounded-md px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                class="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-md hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center"
-              >
-                Send Message <span class="ml-2">📨</span>
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="bg-gray-900 border-t border-gray-800 py-12">
-      <div
-        class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center"
-      >
-        <div class="mb-6 md:mb-0 text-center md:text-left">
-          <a
-            href="#"
-            class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-200 to-purple-400"
-          >
-            ANAR<span class="text-white">/</span>TULGAA
-          </a>
-          <p class="text-gray-400 mt-2 max-w-md">
-            Building digital experiences that merge technical excellence with
-            beautiful design.
-          </p>
-        </div>
-        <div class="flex space-x-4 mb-6 md:mb-0">
-          <!-- Instagram -->
-          <a
-            href="https://www.instagram.com/anarrr_1010/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-gradient-to-r hover:from-purple-500 hover:to-cyan-500 hover:text-white transition-all"
-          >
-            <img
-              src="instagram-icon.png"
-              alt="Instagram"
-              class="w-5 h-5 object-contain"
-            />
-          </a>
-          <!-- LinkedIn -->
-          <a
-            href="https://www.linkedin.com/in/anar-gantulga-565928342/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 hover:text-white transition-all"
-          >
-            <img
-              src="linkedin-icon.png"
-              alt="LinkedIn"
-              class="w-5 h-5 object-contain"
-            />
-          </a>
-          <!-- Github -->
-          <a
-            href="https://github.com/AnarTulgaa"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-600 hover:text-white transition-all"
-          >
-            <img
-              src="Github-icon3.png"
-              alt="GitHub"
-              class="w-5 h-5 object-contain"
-            />
-          </a>
+    <section id="about" class="shell section" aria-labelledby="about-title">
+      <p class="eyebrow">02 / About &amp; approach</p>
+      <div class="editorial-grid">
+        <h2 id="about-title">The whole picture.<br><span class="muted-heading">The practical details.</span></h2>
+        <div class="about-copy">
+          <p class="lead">I connect business priorities with the systems and people that make work happen.</p>
+          <p>My experience spans client-facing project management, logistics platform development, and technology support within transportation and service operations.</p>
+          <p>I’m building on that technical foundation through Operations &amp; Supply Chain Management and International Business studies. My focus: understand the problem, organize the moving parts, and turn complex requirements into a practical path forward.</p>
+          <div class="approach-tags"><span>People</span><span>Process</span><span>Systems</span></div>
         </div>
       </div>
-      <hr class="border-gray-800 my-8" />
-      <div
-        class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center"
-      >
-        <p class="text-gray-500 text-sm mb-4 md:mb-0">
-          © 2025 Anar Gantulga. All rights reserved.
-        </p>
-        <button
-          id="btn-back-to-top"
-          class="flex items-center text-gray-400 hover:text-cyan-400 transition-colors"
-        >
-          Back to top <span class="ml-2">▲</span>
-        </button>
-      </div>
-    </footer>
+    </section>
 
-    <!-- your JS -->
-    <script src="script.js"></script>
-  </body>
+    <section id="skills" class="skills-section section light-section" aria-labelledby="skills-title">
+      <div class="shell">
+        <div class="section-heading"><div><p class="eyebrow">03 / Capabilities</p><h2 id="skills-title">A business mindset.<br>A technical toolkit.</h2></div><p class="section-note">Structured thinking, practical tools,<br>and the skills to work across teams.</p></div>
+        <div class="group-heading"><h3>Hard skills</h3><span>Planning · Analysis · Execution</span></div>
+        <div class="hard-skill-grid">
+          <article class="skill-card"><span class="card-number">01</span><h4>Operations &amp;<br>Supply Chain</h4><ul>
+            <li>Production Planning &amp; Scheduling</li><li>Supply Chain &amp; Logistics Analysis</li><li>Inventory &amp; Material Flow Analysis</li><li>Demand &amp; Capacity Planning</li><li>Process Improvement</li><li>KPI &amp; Performance Tracking</li>
+          </ul></article>
+          <article class="skill-card"><span class="card-number">02</span><h4>Data &amp;<br>Business Analysis</h4><ul>
+            <li><strong>Microsoft Excel</strong><span>Data analysis, forecasting &amp; reporting</span></li><li><strong>Tableau</strong><span>Dashboards &amp; data visualization</span></li><li><strong>SQL</strong><span>Business data analysis</span></li><li>Process Mapping &amp; Workflow Analysis</li>
+          </ul></article>
+          <article class="skill-card"><span class="card-number">03</span><h4>Project &amp;<br>Technical Operations</h4><ul>
+            <li>Project Planning &amp; Coordination</li><li>Cross-Functional Workflow Management</li><li>Requirements &amp; Task Prioritization</li><li>Technical &amp; Business Communication</li>
+          </ul><p class="technical-foundation">Software foundation<br><span>HTML · CSS · JavaScript · C#</span></p></article>
+        </div>
+        <div class="ai-panel"><div><p class="eyebrow">Applied toolkit</p><h3>AI tools</h3><p>Support for thinking,<br>planning, and execution.</p></div>
+          <article><h4>ChatGPT</h4><p>Research · Analysis · Planning<br>Problem solving · First drafts</p></article>
+          <article><h4>Claude</h4><p>Research synthesis · Technical planning<br>Codebase analysis · Documentation</p></article>
+        </div>
+        <div class="group-heading soft-heading"><h3>Soft skills</h3><span>How I work</span></div>
+        <ul class="soft-skill-list"><li>Analytical Problem-Solving</li><li>Cross-Functional Communication</li><li>Organization &amp; Prioritization</li><li>Adaptability</li><li>Attention to Detail</li><li>Ownership &amp; Accountability</li><li>Team Coordination</li></ul>
+      </div>
+    </section>
+
+    <section id="experience" class="shell section experience-section" aria-labelledby="experience-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">04 / Professional perspective</p>
+          <h2 id="experience-title">Experience &amp;<br><span class="muted-heading">education.</span></h2>
+        </div>
+        <div class="experience-intro">
+          <p>Business + operations + technology.<br>A connected professional foundation.</p>
+          <a class="text-link" href="#education">Explore education <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+
+      <div class="experience-list">
+        <article class="experience-entry experience-featured" aria-labelledby="experience-e2i">
+          <div class="experience-meta">
+            <span class="experience-number">01</span>
+            <h3 id="experience-e2i">Utah Valley University — E2i</h3>
+            <p>Orem, Utah</p>
+            <span class="experience-context">Client project execution</span>
+          </div>
+          <div class="experience-content">
+            <div class="role-heading"><p class="row-label">Current role</p><p class="role-date">May 2026 – Present</p></div>
+            <h4>Project Manager</h4>
+            <p class="role-description">Leading client-facing technology projects from requirements through delivery, coordinating developers and stakeholders while managing scope, timelines, priorities, risk, and team capacity.</p>
+            <ul class="experience-tags" aria-label="Project Manager focus areas">
+              <li>Project Management</li><li>Cross-Functional Coordination</li><li>Requirements Analysis</li><li>Planning &amp; Prioritization</li><li>Client Delivery</li>
+            </ul>
+            <div class="previous-role">
+              <div class="role-heading"><p class="row-label">Previously at E2i</p><p class="role-date">February 2026 – May 2026</p></div>
+              <h5>Web Developer</h5>
+              <p>Developed and deployed client-facing web solutions, working across responsive implementation, service integration, content structure, domain configuration, and production deployment.</p>
+              <ul class="experience-tags" aria-label="Web Developer focus areas"><li>Technical Execution</li><li>Web Development</li><li>Deployment</li></ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="experience-entry" aria-labelledby="experience-fintech">
+          <div class="experience-meta">
+            <span class="experience-number">02</span>
+            <h3 id="experience-fintech">Utah Valley University — Finance &amp; Economics</h3>
+            <p>Orem, Utah</p>
+            <span class="experience-context">Logistics &amp; business systems</span>
+          </div>
+          <div class="experience-content">
+            <div class="role-heading"><p class="row-label">Current role</p><p class="role-date">February 2026 – Present</p></div>
+            <h4>Fintech Assistant</h4>
+            <p class="role-description">Working at the intersection of logistics, technology, and business strategy, including development of a digital freight platform for Mongolia and Central Asia and analysis of operational inefficiencies and scalable logistics solutions.</p>
+            <ul class="experience-tags" aria-label="Fintech Assistant focus areas"><li>Logistics</li><li>Business Analysis</li><li>Systems Analysis</li><li>Product Strategy</li><li>Technology</li></ul>
+          </div>
+        </article>
+
+        <article class="experience-entry" aria-labelledby="experience-osso">
+          <div class="experience-meta">
+            <span class="experience-number">03</span>
+            <h3 id="experience-osso">Osso Corporation</h3>
+            <p>Los Angeles, California</p>
+            <span class="experience-context">Transportation &amp; operational systems</span>
+          </div>
+          <div class="experience-content">
+            <div class="role-heading"><p class="row-label">Transportation technology</p><p class="role-date">September 2025 – December 2025</p></div>
+            <h4>IT Support Specialist</h4>
+            <p class="role-description">Supported technology systems inside a trucking and transportation operation, resolving hardware, software, network, and system issues to minimize disruption to daily business activities.</p>
+            <ul class="experience-tags" aria-label="IT Support Specialist focus areas"><li>Transportation Operations</li><li>IT Systems</li><li>Operational Continuity</li><li>Problem Solving</li></ul>
+          </div>
+        </article>
+
+        <article class="experience-entry" aria-labelledby="experience-snow">
+          <div class="experience-meta">
+            <span class="experience-number">04</span>
+            <h3 id="experience-snow">Snow College — IT Department</h3>
+            <p>Ephraim, Utah</p>
+            <span class="experience-context">Technology &amp; service operations</span>
+          </div>
+          <div class="experience-content">
+            <div class="role-heading"><p class="row-label">Service operations</p><p class="role-date">September 2023 – May 2025</p></div>
+            <h4>IT Helpdesk Assistant</h4>
+            <p class="role-description">Supported campus technology operations while improving how service requests were tracked and prioritized, contributing to a 20% reduction in average response time.</p>
+            <div class="experience-result"><strong>20%</strong><p>Reduction in average<br>response time</p></div>
+            <ul class="experience-tags" aria-label="IT Helpdesk Assistant focus areas"><li>Service Operations</li><li>Process Improvement</li><li>Prioritization</li><li>Technical Support</li></ul>
+          </div>
+        </article>
+      </div>
+
+      <section id="education" class="education-block light-section" aria-labelledby="education-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">Direction &amp; foundation</p><h2 id="education-title">Education.</h2></div>
+          <p class="section-note">An operations and business direction,<br>built on a technical foundation.</p>
+        </div>
+        <div class="education-grid">
+          <article class="education-card education-primary" aria-labelledby="education-uvu">
+            <p class="row-label">Current direction</p>
+            <h3 id="education-uvu">Utah Valley University</h3>
+            <p class="education-location">Orem, Utah</p>
+            <h4 class="degree-primary"><span>B.S.</span>Operations &amp;<br>Supply Chain<br>Management</h4>
+            <p class="education-minor">Minor: International Business</p>
+            <p class="education-date">Expected May 2027</p>
+            <ul class="experience-tags" aria-label="Education focus areas"><li>Operations</li><li>Supply Chain</li><li>International Business</li><li>Business Analytics</li></ul>
+          </article>
+          <article class="education-card education-foundation" aria-labelledby="education-snow">
+            <p class="row-label">Technical foundation</p>
+            <h3 id="education-snow">Snow College</h3>
+            <p class="education-location">Ephraim, Utah</p>
+            <div class="foundation-degrees"><h4>A.S. Pre-Engineering<span>Software Engineering</span></h4><h4>A.S. Science</h4></div>
+            <p class="education-date">August 2025</p>
+            <p class="education-description">Technical foundation in software development, computing, quantitative problem-solving, and engineering.</p>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <section id="contact" class="shell contact-section" aria-labelledby="contact-title">
+      <div class="contact-panel"><div class="contact-top"><p class="eyebrow">05 / Let’s connect</p><span class="contact-location">Utah, USA</span></div><h2 id="contact-title">Let’s make<br>work <em>better.</em></h2><div class="contact-bottom"><p>For conversations about operations,<br>business, technology, and what comes next.</p><a class="button" href="mailto:Anargantulga984@gmail.com">Get in touch <span aria-hidden="true">↗</span></a></div><div class="contact-links"><a href="mailto:Anargantulga984@gmail.com">Anargantulga984@gmail.com <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/anar-gantulga-565928342/" target="_blank" rel="noopener noreferrer">LinkedIn <span class="sr-only">(opens in a new tab)</span><span aria-hidden="true">↗</span></a><a href="https://github.com/AnarTulgaa" target="_blank" rel="noopener noreferrer">GitHub <span class="sr-only">(opens in a new tab)</span><span aria-hidden="true">↗</span></a><a href="tel:+18018334082">+1 (801) 833-4082</a></div></div>
+    </section>
+  </main>
+  <footer class="shell site-footer"><a class="wordmark" href="#hero">Anar Gantulga<span aria-hidden="true">.</span></a><p>Operations · Technology · Global Business</p><a class="text-link" href="#hero">Back to top <span aria-hidden="true">↑</span></a></footer>
+</body>
 </html>
