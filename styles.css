@@ -335,7 +335,17 @@ h1 em { color: #aaa9a5; }
   .site-footer { padding-block: 30px; gap: 16px; }
   .site-footer > p { flex-basis: 100%; order: 3; }
 }
+/* Progressive enhancement: offscreen content is armed only by JavaScript.
+   Individual translate/scale leave existing hover transforms untouched. */
+.hero-line { display: inline-block; }
+.motion-pending { opacity: 0; }
+/* Contain directional entrances without changing any section's layout. */
+main { overflow-x: clip; }
+@media print {
+  .motion-pending { opacity: 1; }
+}
 @media (prefers-reduced-motion: reduce) {
+  .motion-pending { opacity: 1; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
   .project-panel:hover .project-image img, .button:hover { transform: none; }
