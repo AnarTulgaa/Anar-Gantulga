@@ -164,21 +164,20 @@ if (menuButton && navigation) {
     states.get(element).ready = false;
   }
 
-  function reveal(element, immediate = false, rate = 1) {
+  function reveal(element, immediate = false) {
     const settings = pending.get(element);
     if (!states.get(element).ready) return;
     finish(element);
     if (immediate || reducedMotion.matches || disabled) return;
-    const distance = mobile.matches ? 0.55 : 1;
+    const distance = mobile.matches ? 0.65 : 1;
     const animation = element.animate([
       { opacity: 0, translate: `${settings.x * distance * direction}px ${settings.y * distance * direction}px`,
-        scale: settings.scale, filter: `blur(${settings.blur}px)` },
-      { opacity: 1, translate: "0px 0px", scale: 1, filter: "blur(0px)" }
+        scale: settings.scale },
+      { opacity: 1, translate: "0px 0px", scale: 1 }
     ], {
-      duration: settings.duration, delay: rate > 1.3 ? 0 : settings.delay,
+      duration: settings.duration, delay: settings.delay,
       easing: "cubic-bezier(0.22, 1, 0.36, 1)", fill: "backwards"
     });
-    animation.playbackRate = rate;
     active.set(element, animation);
     animation.onfinish = () => {
       active.delete(element);
@@ -189,8 +188,8 @@ if (menuButton && navigation) {
   function group(selector, options = {}) {
     document.querySelectorAll(selector).forEach((element, index) => {
       pending.set(element, {
-        x: 0, y: 80, scale: 1, blur: 4, duration: 1600,
-        delay: (index % 3) * 120, ...options
+        x: 0, y: 45, scale: 1, duration: 1400,
+        delay: (index % 3) * 90, ...options
       });
     });
   }
@@ -201,16 +200,19 @@ if (menuButton && navigation) {
     const delta = y - lastY;
     const now = performance.now();
     const elapsed = Math.max(16, now - lastTime);
-    velocity = Math.max(Math.abs(delta) / elapsed, velocity * Math.exp(-elapsed / 100));
-    if (delta !== 0) lastTime = now;
+    // Low-pass both input velocity and playback speed. Keep ticking while a
+    // reveal runs so wheel pauses decay smoothly rather than freezing the rate.
+    const damping = 1 - Math.exp(-elapsed / 180);
+    velocity += (Math.abs(delta) / elapsed - velocity) * damping;
+    lastTime = now;
     if (Math.abs(y - directionY) > 2) {
       direction = y > directionY ? 1 : -1;
       directionY = y;
     }
-    const speed = velocity * 1000 / innerHeight; // Viewports per second.
-    const fast = speed > 2.4 || Math.abs(delta) > innerHeight * 0.45;
-    const rate = 1 + Math.min(4, Math.max(0, speed - 0.35) * 2);
-    const lead = 180 + Math.min(120, velocity * 150);
+    const speed = velocity * 1000 / innerHeight;
+    const jumped = Math.abs(delta) > innerHeight * 0.45;
+    const rate = 1 + Math.min(1.5, Math.max(0, speed - 0.4) * 0.6);
+    const lead = 240 + Math.min(160, velocity * 160);
     lastY = y;
     if (measure) {
       for (const [element, state] of states) {
@@ -227,7 +229,7 @@ if (menuButton && navigation) {
       const bottom = top + state.height;
       if (reducedMotion.matches || disabled || element.contains(document.activeElement)) {
         finish(element);
-      } else if (bottom < -420 || top > innerHeight + 420) {
+      } else if (bottom < -520 || top > innerHeight + 520) {
         // Reset only beyond the viewport plus a buffer. Small reversals never
         // restart a visible entrance, even when its transform crosses an edge.
         active.get(element)?.cancel();
@@ -235,22 +237,22 @@ if (menuButton && navigation) {
         state.ready = true;
         element.classList.add("motion-pending");
       } else if (bottom > -lead && top < innerHeight + lead) {
-        const reading = direction > 0 ? top < innerHeight * 0.75 : bottom > innerHeight * 0.25;
+        const reading = top < innerHeight * 0.85 && bottom > innerHeight * 0.15;
         if (state.ready) {
-          reveal(element, fast || (delta !== 0 && reading), rate);
-        } else if (active.has(element)) {
-          const animation = active.get(element);
-          if (fast || (delta !== 0 && reading)) {
-            finish(element);
-          } else if (rate > 1.3) {
-            // Remove only the remaining stagger; retain the current visual pose.
-            const timing = animation.effect.getTiming();
-            if (animation.currentTime < timing.delay) animation.currentTime = timing.delay;
-            animation.updatePlaybackRate(Math.max(animation.playbackRate, rate));
-          }
+          // Anchor/scrollbar jumps land readable immediately. An entrance already
+          // underway always retains its pose, timeline, and original direction.
+          reveal(element, jumped && reading);
+        }
+        const animation = active.get(element);
+        if (animation) {
+          const targetRate = reading && speed > 1 ? 2.5 : rate;
+          const nextRate = animation.playbackRate +
+            (targetRate - animation.playbackRate) * (1 - Math.exp(-elapsed / 220));
+          animation.updatePlaybackRate(nextRate);
         }
       }
     }
+    if (active.size) scheduleCheck();
   }
 
   function scheduleCheck() {
@@ -264,43 +266,44 @@ if (menuButton && navigation) {
 
   try {
     group(".hero-intro", { y: 35, duration: 1400, delay: 0 });
-    group(".hero-line", { y: 90, delay: 0 });
+    group(".hero-line", { y: 50, delay: 0 });
     document.querySelectorAll(".hero-line").forEach((element, index) => {
-      pending.get(element).delay = 90 + index * 120;
+      pending.get(element).delay = 70 + index * 90;
     });
-    group(".hero-description", { delay: 340, y: 55 });
-    group(".hero-actions", { delay: 440, y: 45, blur: 0 });
-    group(".portrait", { x: 70, y: 20, scale: 0.97, blur: 0, delay: 160, duration: 1800 });
-    group(".hero-note", { delay: 280, y: 40 });
+    group(".hero-description", { delay: 180, y: 55 });
+    group(".hero-actions", { delay: 270, y: 45 });
+    group(".portrait", { x: 45, y: 35, scale: 0.985, delay: 90, duration: 1500 });
+    group(".hero-note", { delay: 180, y: 40 });
     group(".capability-list > li", { y: 45 });
     group(".perspective-strip, .section-heading > *, #about > .eyebrow, #about-title, .group-heading", { delay: 0 });
     document.querySelectorAll(".project-panel").forEach((panel, index) => {
       const reverse = index % 2 ? -1 : 1;
       pending.set(panel.querySelector(".project-image"), {
-        x: -70 * reverse, y: 25, scale: 0.97, blur: 0, duration: 1800, delay: 0
+        x: -45 * reverse, y: 35, scale: 0.985, duration: 1500, delay: 0
       });
-      panel.querySelectorAll(".project-copy > *").forEach((element, detail) => {
-        pending.set(element, { x: 60 * reverse, y: 35, scale: 1,
-          blur: 4, duration: 1600, delay: Math.min(detail * 110, 330) });
+      // One copy entrance keeps the heading, description, and details connected.
+      pending.set(panel.querySelector(".project-copy"), {
+        x: 40 * reverse, y: 35, scale: 1, duration: 1400, delay: 90
       });
     });
-    group(".project-disclosure", { y: 45, blur: 0 });
-    group(".about-copy > *", { y: 70 });
-    group(".skill-card", { scale: 0.98, blur: 0 });
-    group(".ai-panel, .soft-skill-list", { y: 55, delay: 0, blur: 0 });
-    group(".experience-meta, .experience-content", { y: 65, blur: 0 });
-    group(".education-card", { y: 60, scale: 0.98, blur: 0 });
-    group(".contact-top, #contact-title, .contact-bottom, .contact-links", { y: 80 });
+    group(".project-disclosure", { y: 45 });
+    group(".about-copy > *", { y: 45 });
+    group(".skill-card", { scale: 0.985 });
+    group(".ai-panel, .soft-skill-list", { y: 55, delay: 0 });
+    group(".experience-meta, .experience-content", { y: 45 });
+    group(".education-card", { y: 60, scale: 0.985 });
+    group(".contact-top, #contact-title, .contact-bottom, .contact-links", { y: 50 });
 
-    group(".site-footer > *", { y: 45, blur: 0 });
+    group(".site-footer > *", { y: 45 });
     observer = new IntersectionObserver(scheduleCheck, {
-      rootMargin: "420px 0px 420px 0px", threshold: 0
+      rootMargin: "520px 0px 520px 0px", threshold: 0
     });
     for (const element of pending.keys()) {
       states.set(element, { ready: true, top: 0, height: 0 });
       observer.observe(element);
     }
     update();
+    document.fonts?.ready.then(refresh);
     window.addEventListener("scroll", scheduleCheck, { passive: true });
     window.addEventListener("resize", refresh, { passive: true });
     window.addEventListener("pageshow", refresh);
