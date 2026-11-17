@@ -42,8 +42,18 @@ em { font-style: normal; }
 .button:hover { background: #ffffff; transform: translateY(-2px); }
 .button-small { padding: 12px 20px; gap: 20px; font-size: 12px; }
 .text-link { display: inline-flex; align-items: center; gap: 24px; font-size: 13px; font-weight: 500; }
-.text-link span, .contact-links a span { transition: transform .2s; }
-.text-link:hover span, .contact-links a:hover span { transform: translate(3px, -2px); }
+/* Fixed geometry and currentColor keep icons consistent across browsers. */
+.icon { display: inline-block; width: 16px; height: 16px; flex: 0 0 16px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; vertical-align: middle; }
+.system-diagram > .icon { justify-self: center; }
+.icon-vertical { transition: opacity .2s; }
+.project-disclosure[open] .icon-vertical, .menu-toggle[aria-expanded="true"] .icon-vertical { opacity: 0; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  a > .icon { transition: transform .2s; }
+  a:hover > .icon-up-right { transform: translate(2px, -2px); }
+  a:hover > .icon-down-right { transform: translate(2px, 2px); }
+  a:hover > .icon-up { transform: translateY(-2px); }
+  a:hover > .icon-down { transform: translateY(2px); }
+}
 .menu-toggle { display: none; color: var(--text); background: transparent; border: 1px solid var(--line); border-radius: 4px; padding: 9px 16px; cursor: pointer; }
 .menu-toggle[hidden] { display: none; }
 .hero { margin-top: 24px; border-radius: var(--radius); padding: 56px 0 0; background: var(--bg); border: 0; }
@@ -136,8 +146,7 @@ h1 em { color: #aaa9a5; }
 .work-number { color: var(--accent); font-size: 11px; }
 .project-disclosure summary strong { font-size: 21px; font-weight: 500; letter-spacing: -.03em; }
 .project-disclosure summary small { display: block; color: var(--muted); font-size: 11px; margin-top: 5px; }
-.disclosure-icon { font-size: 24px; color: var(--accent); text-align: center; transition: transform .2s; }
-.project-disclosure[open] .disclosure-icon { transform: rotate(45deg); }
+.disclosure-icon { color: var(--accent); justify-self: center; }
 .disclosure-content { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; padding: 8px 8px 38px 73px; align-items: center; }
 .disclosure-content img { border-radius: 4px; width: 100%; }
 .disclosure-content h4 { font-size: 23px; line-height: 1.3; margin-bottom: 14px; }
